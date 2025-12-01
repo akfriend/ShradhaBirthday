@@ -120,8 +120,9 @@
     /* Foreground image with soft zoom */
     .slide-img {
         position: relative;
-        max-height: 70vh;
+        max-height: 60vh;   
         max-width: 80vw;
+        margin-top: -55px;
         object-fit: contain;
         border-radius: 22px;
         box-shadow:
@@ -245,6 +246,18 @@
             bottom: 2%;
         }
     }
+   @media (max-width: 480px) {
+    .slide-img {
+        max-height: 52vh !important;   /* reduced more for small screens */
+        margin-top: -70px !important;  /* push image further up */
+    }
+
+    .message-box {
+        max-height: 45vh !important;   /* bigger space for text */
+        bottom: 1% !important;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -389,4 +402,5 @@
 </script>
 </body>
 </html>
+
 
