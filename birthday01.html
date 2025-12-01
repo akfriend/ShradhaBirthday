@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎉</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+    }
+
+    .slideshow-container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+    }
+
+    .slide {
+        position: absolute;
+        max-height: 100vh;
+        max-width: 100vw;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        object-fit: contain; /* keeps clarity */
+        filter: brightness(90%);
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .message {
+        position: absolute;
+        bottom: 3%;
+        width: 95%;
+        font-size: 1.3rem;
+        padding: 18px;
+        background: rgba(0,0,0,0.55);
+        border-radius: 16px;
+        backdrop-filter: blur(6px);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="slideshow-container">
+    <img src="1.jpeg" class="slide active">
+    <img src="2.jpeg" class="slide">
+    <img src="3.jpeg" class="slide">
+    <img src="4.jpeg" class="slide">
+    <img src="5.jpeg" class="slide">
+    <img src="6.jpeg" class="slide">
+    <img src="7.jpeg" class="slide">
+    <img src="8.jpeg" class="slide">
+    <img src="9.jpeg" class="slide">
+    <img src="10.jpeg" class="slide">
+
+    <div class="message">
+        When I see you, I feel an incredible sense of relief.  
+        Your smile brightens my world more than you know.  
+        On your special day, I wish you endless happiness,  
+        peace, love, and a smile that never fades.  
+        Happy Birthday! ❤️✨
+    </div>
+</div>
+
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }, 2500);
+</script>
+
+</body>
+</html>
