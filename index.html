@@ -198,7 +198,8 @@
     text-align: center;
     z-index: 5;
     opacity: 0;
-    overflow-y: auto;            /* NEW: scrolls only when needed */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* NEW: scrolls only when needed */
     scrollbar-width: none;       /* hide scroll bar (Firefox) */
     -ms-overflow-style: none;    /* hide scroll bar (IE/Edge) */
     animation: msgFade 2s forwards;
@@ -402,5 +403,6 @@
 </script>
 </body>
 </html>
+
 
 
