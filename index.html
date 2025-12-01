@@ -17,8 +17,7 @@
             "Segoe UI", sans-serif;
         background: #05030a;
         color: #fff;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
     }
 
     /* Intro overlay */
@@ -77,8 +76,7 @@
         display: none; /* shown after click */
         align-items: center;
         justify-content: center;
-        overflow-x: hidden;
-        overflow-y: auto; 
+        overflow: hidden;
         background: radial-gradient(circle at top, #201734 0, #05030a 55%, #000 100%);
     }
 
@@ -252,15 +250,17 @@
     }
    @media (max-width: 480px) {
     .slide-img {
-        max-height: 52vh !important;   /* reduced more for small screens */
-        margin-top: -70px !important;  /* push image further up */
+        max-height: 50vh !important;
+        margin-top: -65px !important;
     }
 
     .message-box {
-        max-height: 45vh !important;   /* bigger space for text */
+        max-height: 50vh !important;
         bottom: 1% !important;
+        padding-bottom: 35px !important; /* extra space to see last line */
     }
 }
+
 
 </style>
 </head>
@@ -406,6 +406,7 @@
 </script>
 </body>
 </html>
+
 
 
 
